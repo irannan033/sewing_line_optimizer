@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    { "name": "1. Train all models", "type": "debugpy", "request": "launch",
+      "module": "src.train_all", "cwd": "${workspaceFolder}" },
+    { "name": "2. Run optimization demo", "type": "debugpy", "request": "launch",
+      "module": "src.run_optimization", "cwd": "${workspaceFolder}" },
+    { "name": "3. Vision monitor (demo video)", "type": "debugpy", "request": "launch",
+      "module": "src.vision.realtime_monitor", "args": ["--demo"], "cwd": "${workspaceFolder}" },
+    { "name": "3b. Vision monitor (webcam)", "type": "debugpy", "request": "launch",
+      "module": "src.vision.realtime_monitor", "args": ["--source", "0", "--stations", "4"], "cwd": "${workspaceFolder}" }
+  ]
+}
